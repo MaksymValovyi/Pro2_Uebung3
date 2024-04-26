@@ -16,8 +16,17 @@ public:
     double getIm() const;
 
     Complex operator+(const Complex &c1);
+    Complex operator*(const Complex &c1) const;
+    //friend Complex operator*(const Complex &c1, int number);
+
+    Complex operator+=(const Complex &c1) const;
+    Complex operator+(const Complex &c1) const; 
 
 };
 
 ostream& operator<<(ostream& os, const Complex &c);
+
+//Warum muss ich das global machen ? 
+Complex operator*(int , const Complex&);
+Complex operator*( const Complex&, int);
 //global
