@@ -55,7 +55,7 @@ int main(int argc, char const *argv[])
     //REGEL DEN GROSSEN DREI
     //CONSTRUCTOR (WITH DYNAMIC MEMORY)=> DESTRUCTOR => COPYCONSTRUCTOR => ZUWEISUNGOPERATOR
     
-    test1(10);
+    test1(5);
     return 0;
 }
 

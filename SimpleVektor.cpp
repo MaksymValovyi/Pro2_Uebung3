@@ -71,7 +71,7 @@ ostream& operator<<(ostream& os, const SimpleVektor& v)
         }
         os << endl;
    */
-    os << "V[" << v.groesse << " ]";
+    os << "V[" << v.groesse << "]";
     
     if(v.daten!=nullptr){
         for(int i = 0; i < v.groesse; i++){
