@@ -15,7 +15,7 @@ public:
 
     void operator<<=(int nval);
 
-    //SimpleVektor &operator=(const SimpleVektor &v2);
+    SimpleVektor &operator=(const SimpleVektor &v2);
 };
 
 ostream& operator<<(ostream& os, const SimpleVektor &v);

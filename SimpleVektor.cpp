@@ -51,14 +51,30 @@ void SimpleVektor::operator<<=(int nval)
         }
     }
 }
-/*
+
 //zuweisungsoperator
 SimpleVektor &SimpleVektor::operator=(const SimpleVektor &vref)
 {
+    if(this->daten!=nullptr){
+        if(this->groesse < vref.groesse){
+            for(int i = 0; i < this->groesse; i++){
+                this->daten[i] = vref.daten[i];
+            }
+        }else if(this->groesse > vref.groesse){
+            for(int i = 0; i < vref.groesse; i++){
+                this->daten[i] = vref.daten[i];
+            }
+        }else{
+            for(int i = 0; i < this->groesse; i++){
+                this->daten[i] = vref.daten[i];
+            } 
+        }
+        
+    }
     return *this;
 }
 
-*/
+
 ///////Ab hier globale Operatoren
 
 ostream& operator<<(ostream& os, const SimpleVektor& v)

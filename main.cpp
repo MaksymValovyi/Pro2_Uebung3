@@ -43,6 +43,12 @@ void test1(int len) {
     cout << v1 << v2 << v3 << endl;
     v1 <<= 1; v2 <<= 2; v3 <<= 3;   
     cout << v1 << v2 << v3 << endl; 
+    v1 = v2;
+    cout << v1 << v2 << v3 << endl;
+    v3 = v2;
+    cout << v1 << v2 << v3 << endl;
+    v1 <<= 4;
+    cout << v1 << v2 << v3 << endl;
 }
 
 int main(int argc, char const *argv[])
