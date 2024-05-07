@@ -49,6 +49,10 @@ void test1(int len) {
     cout << v1 << v2 << v3 << endl;
     v1 <<= 4;
     cout << v1 << v2 << v3 << endl;
+    SimpleVektor v5(2*len);
+    v5 <<= 5;
+    v1 = v5;
+    cout << v5 << endl;
 }
 
 int main(int argc, char const *argv[])

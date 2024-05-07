@@ -55,24 +55,54 @@ void SimpleVektor::operator<<=(int nval)
 //zuweisungsoperator
 SimpleVektor &SimpleVektor::operator=(const SimpleVektor &vref)
 {
-    if(this->daten!=nullptr){
-        if(this->groesse < vref.groesse){
-            for(int i = 0; i < this->groesse; i++){
-                this->daten[i] = vref.daten[i];
-            }
-        }else if(this->groesse > vref.groesse){
-            for(int i = 0; i < vref.groesse; i++){
-                this->daten[i] = vref.daten[i];
-            }
-        }else{
-            for(int i = 0; i < this->groesse; i++){
-                this->daten[i] = vref.daten[i];
-            } 
-        }
-        
+    /*
+    this->groesse = vref.groesse;
+    if (this==&vref)
+    {
+        return *this;
     }
-    return *this;
-}
+    if(vref.daten!=nullptr){
+        for(int i = 0; i < this->groesse; i++){
+                this->daten[i] = vref.daten[i];
+        }
+        if(this->daten == nullptr){
+                delete [] this->daten;
+        }
+    */
+        /*
+            if(this->groesse < vref.groesse){
+                for(int i = 0; i < this->groesse; i++){
+                    this->daten[i] = vref.daten[i];
+                }
+            }else if(this->groesse > vref.groesse){
+                for(int i = 0; i < this->groesse; i++){
+                    this->daten[i] = vref.daten[i];
+                }
+            }else{
+                for(int i = 0; i < this->groesse; i++){
+                    this->daten[i] = vref.daten[i];
+                } 
+            }
+        */
+
+        
+       //Loesung des Professors
+        
+        if (this==&vref)
+        {
+            return *this;
+        }
+        this->~SimpleVektor();
+        this->groesse=vref.groesse;
+        this->daten = new int[this->groesse];
+        if(this->daten!=nullptr){
+            for(int i = 0; i < this->groesse; i++){
+                this->daten[i] = vref.daten[i];
+            }
+        }
+        return*this;       
+        
+} 
 
 
 ///////Ab hier globale Operatoren
