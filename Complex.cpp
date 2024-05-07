@@ -10,22 +10,6 @@ Complex::Complex(double real_part, double imag_part)
 
 }
 
-double Complex::getIm(){
-    return im;
-}
-
-double Complex::getRe(){
-    return re;
-}
-
-double Complex::getIm() const {
-    return im;
-}
-
-double Complex::getRe() const {
-    return re;
-}
-
 Complex Complex::operator+(const Complex &c1)
 {
     Complex cresult(re + c1.re, im + c1.im);

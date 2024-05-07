@@ -10,10 +10,22 @@ double im;
 public:
     inline Complex(double real_part, double imag_part);
 
-    double getRe();
-    double getRe() const;
-    double getIm();
-    double getIm() const;
+    double getRe()
+    {
+        return re;
+    };
+    double getRe() const
+    {
+        return re;
+    };
+    double getIm()
+    {
+        return im;
+    };
+    double getIm() const
+    {
+        return im;
+    };
 
     Complex operator+(const Complex &c1);
     Complex operator*(const Complex &c1) const;
