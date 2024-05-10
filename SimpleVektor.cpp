@@ -52,6 +52,24 @@ void SimpleVektor::operator<<=(int nval)
     }
 }
 
+bool SimpleVektor::operator<(const SimpleVektor &v){
+    if(this->groesse < v.groesse){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+void SimpleVektor::operator+=(int nval){
+    if(this->daten!=nullptr){
+        for (int i = 0; i < this->groesse; i++)
+        {
+            this->daten[i] +=nval;
+        }
+    }
+}
+
+
 //zuweisungsoperator
 SimpleVektor &SimpleVektor::operator=(const SimpleVektor &vref)
 {

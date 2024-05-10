@@ -14,6 +14,8 @@ public:
     ~SimpleVektor();
 
     void operator<<=(int nval);
+    bool operator<(const SimpleVektor &v);
+    void operator+=(int nval);
 
     SimpleVektor &operator=(const SimpleVektor &v2);
 };

@@ -37,22 +37,17 @@ void testComplex()
 }
 
 void test1(int len) {
-    SimpleVektor v1(len), v2(len) , v3(3*len); 
-    //SimpleVektor v2(len); 
-    //SimpleVektor v3(2*len);
-    cout << v1 << v2 << v3 << endl;
-    v1 <<= 1; v2 <<= 2; v3 <<= 3;   
-    cout << v1 << v2 << v3 << endl; 
+    SimpleVektor v1(len); SimpleVektor v2(len); SimpleVektor v3(2*len);
+    cout << v1; cout << v2; cout << v3;
+    v1 <<= 1; v2 <<= 2; v3 <<= 3;
+    cout << v1; cout << v2; cout << v3;
+    if(v1 < v3) {
+    SimpleVektor v4 = v2;
+    v4 += 5;
+    cout << "Vektor v4 after +5 = "<< v4;
+    }
     v1 = v2;
-    cout << v1 << v2 << v3 << endl;
-    v3 = v2;
-    cout << v1 << v2 << v3 << endl;
-    v1 <<= 4;
-    cout << v1 << v2 << v3 << endl;
-    SimpleVektor v5(2*len);
-    v5 <<= 5;
-    v1 = v5;
-    cout << v5 << endl;
+    cout << v1; cout << v2; cout << v3;
 }
 
 int main(int argc, char const *argv[])
